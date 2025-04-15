@@ -3,7 +3,6 @@ package pkg
 import (
 	"context"
 	"fmt"
-	"log"
 	"strings"
 
 	artifactregistry "cloud.google.com/go/artifactregistry/apiv1"
@@ -35,13 +34,11 @@ func (ar *ArtifactRegistry) ParseConfig(in map[string] any) error {
 		return err
 	}
 	ar.Config=config
-	log.Println("/////////////////////////////")
-	log.Println(ar.Config.RepoName)
-	log.Println("/////////////////////////////")
 	return nil
 }
 
-func (ar *ArtifactRegistry) SetupPlugin() error {
+func (ar *ArtifactRegistry) SetupPlugin(config map[string] any) error {
+	ar.ParseConfig(config)
 	ctx := context.Background()
 	c, err := artifactregistry.NewClient(ctx)
 	if err != nil {
@@ -68,7 +65,8 @@ func (ar *ArtifactRegistry) SetupPlugin() error {
 	return nil
 }
 
-func (ar *ArtifactRegistry) GetOutput() shared.GetOutputResponse {
+func (ar *ArtifactRegistry) GetOutput(config map[string] any) shared.GetOutputResponse {
+	ar.ParseConfig(config)
 	ctx := context.Background()
 	c, err := artifactregistry.NewClient(ctx)
 	if err != nil {
@@ -99,7 +97,8 @@ func (ar *ArtifactRegistry) GetOutput() shared.GetOutputResponse {
 }
 
 
-func (ar *ArtifactRegistry) Destroy() error {
+func (ar *ArtifactRegistry) Destroy(config map[string] any) error {
+	ar.ParseConfig(config)
 	ctx := context.Background()
 	c, err := artifactregistry.NewClient(ctx)
 	if err != nil {
