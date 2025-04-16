@@ -85,6 +85,8 @@ github.com/pigen-dev/shared v1.0.20 h1:jU5u+wkEZeS8LQR55OnPJaUeKAnxVWJzgORG0GYJF
 github.com/pigen-dev/shared v1.0.20/go.mod h1:Iv6t6BxozMCdwwivNm+ZOEIMzwytb0ky+TWb3H7wuCI=
 github.com/pigen-dev/shared v1.0.21 h1:ueDS+kR3nD5lyy7VPSL7fIyGdMMav9az697SMba+1zU=
 github.com/pigen-dev/shared v1.0.21/go.mod h1:Iv6t6BxozMCdwwivNm+ZOEIMzwytb0ky+TWb3H7wuCI=
+github.com/pigen-dev/shared v1.1.0 h1:srnGe6m3k5MkBYtTGoSZKqqxIIuC8KTtSP9WNpddZnw=
+github.com/pigen-dev/shared v1.1.0/go.mod h1:Iv6t6BxozMCdwwivNm+ZOEIMzwytb0ky+TWb3H7wuCI=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rogpeppe/go-internal v1.13.1 h1:KvO1DLK/DRN07sQ1LQKScxyZJuNnedQ5/wKSR38lUII=
